@@ -471,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527059841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.05, y: -0.81, z: 0.43}
+  m_LocalPosition: {x: -9.05, y: -1.09, z: 0.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2081743710}
@@ -889,11 +889,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.215
+      value: -0.055
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.865
+      value: -0.73
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1686,7 +1686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400114, guid: 70aa479a650dcb44ebb7a6ef4b3f280f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 582.3
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 400114, guid: 70aa479a650dcb44ebb7a6ef4b3f280f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2680,8 +2680,8 @@ Rigidbody:
   m_GameObject: {fileID: 1660712888}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 10
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2765,7 +2765,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1791194871
 MeshRenderer:

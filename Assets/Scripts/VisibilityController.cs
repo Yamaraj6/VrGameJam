@@ -11,11 +11,11 @@ public class VisibilityController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.Equals(rightHand))
+        if (other.transform.parent.gameObject.Equals(rightHand))
         {
             rightGinatHand.gameObject.SetActive(true);
         }
-        if (other.gameObject.Equals(leftHand))
+        if (other.transform.parent.gameObject.Equals(leftHand))
         {
             leftGinatHand.gameObject.SetActive(true);
         }
@@ -23,11 +23,11 @@ public class VisibilityController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     { 
-        if (other.gameObject.Equals(rightHand))
+        if (other.transform.parent.gameObject.Equals(rightHand))
         {
             rightGinatHand.gameObject.SetActive(false);
         }
-        if (other.gameObject.Equals(leftHand))
+        if (other.transform.parent.gameObject.Equals(leftHand))
         {
             leftGinatHand.gameObject.SetActive(false);
         }
