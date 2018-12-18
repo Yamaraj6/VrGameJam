@@ -17,7 +17,7 @@ public class Alien : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     public void Initialize(){
         targetPlanet = GameController.Instance.targetPlanet;
-        defendObject = GameController.Instance.currentPlanet.defendObject;
+        defendObject = GameController.Instance.currentPlanet.GetNearestTwon(transform);
         radius = GameController.Instance.currentPlanet.radius;
         speed = GameController.Instance.spawner.speedAlien;
        // wayPoint = defendObject.position; //Random.onUnitSphere * radius + targetPlanet.position;

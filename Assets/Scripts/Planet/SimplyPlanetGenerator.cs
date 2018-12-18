@@ -5,6 +5,8 @@ using UnityEngine;
 public class SimplyPlanetGenerator : MonoBehaviour
 {
     public GameObject[] planets;
+    public GameObject[] towns;
+    public int townAmount;
 
 
 
@@ -16,6 +18,22 @@ public class SimplyPlanetGenerator : MonoBehaviour
         if (!planetScript){
             planetScript = newPlanet.AddComponent<Planet>();
         }
+        GameObject[] selectedTowns = GetTowns(townAmount);
+
+        planetScript.Initialize(selectedTowns); // #TODO set few random cities
         return planetScript;
     }
+
+
+    private GameObject[] GetTowns(int amount){
+        List<GameObject> newTowns = new List<GameObject>();
+        int i = 0;
+        while( i < amount ){
+            int index = Random.Range(0, towns.Length);
+            newTowns.Add(towns[index]);
+            i++;
+        }
+        return newTowns.ToArray();
+    }
+
 }
