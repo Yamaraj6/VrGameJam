@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CityController : MonoBehaviour, IDestroyable
+public class DestroyController : MonoBehaviour, IDestroyable
 {
     private bool isDestroyed;
     [SerializeField] private List<DestroyState> states;
@@ -37,11 +37,4 @@ public class CityController : MonoBehaviour, IDestroyable
     {
         return isDestroyed;
     }
-}
-
-[Serializable]
-public class DestroyState
-{
-    [Range(0, 100)] public float healthInPercents;
-    public GameObject state;
 }

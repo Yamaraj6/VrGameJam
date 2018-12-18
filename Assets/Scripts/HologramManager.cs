@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HologramController : MonoBehaviour
+public class HologramManager : MonoBehaviour
 {
     [SerializeField] private Transform giantPlanet;
     [SerializeField] private Transform hologramPlanet;
@@ -20,7 +20,7 @@ public class HologramController : MonoBehaviour
 
     private float scale;
 
-    public static HologramController Instance;
+    public static HologramManager Instance;
     
     private void Awake()
     {
@@ -40,13 +40,15 @@ public class HologramController : MonoBehaviour
         UpdateHologramsPosition();
     }
 
-    public void AddHologram()
+    public void AddHologram(Transform originalSpaceShip)
     {
         var holoPostion = hologramPlanet.position -giantPlanet.position*scale+
                           ((spaceships[spaceships.Count - 1].transform.position +
                             spaceships[spaceships.Count - 1].transform.position) * scale);
         var holoRotation = spaceships[spaceships.Count - 1].transform.rotation;
-        holoSpaceships.Add(Instantiate(hologramSpaceship.transform, holoPostion, holoRotation, hologramParent));
+        var hologramSpaceShip = Instantiate(hologramSpaceship.transform, holoPostion, holoRotation, hologramParent);
+        hologramSpaceShip.GetComponent<HolographicSpaceship>().Initialize(originalSpaceShip);
+        holoSpaceships.Add(hologramSpaceShip);
         //addHologramEffect
     }
 

@@ -33,11 +33,11 @@ public class GameController : MonoBehaviour
     }
     public static void AddSpaceshipToList(Transform newSpaceship){
         GameController.Instance.allSpaceships.Add(newSpaceship);
-        HologramController.Instance?.AddHologram();
+        HologramManager.Instance?.AddHologram(newSpaceship);
     }
     public static void RemoveSpaceshipFromList(Transform spaceship){
         GameController.Instance.allSpaceships.Remove(spaceship);
-        HologramController.Instance?.DestroyHologram(spaceship);
+        HologramManager.Instance?.DestroyHologram(spaceship);
     }
     public static void RemoveAlienFromList(Transform alien){
         GameController.Instance.allAliens.Remove(alien);
