@@ -26,7 +26,7 @@ public class CoolDown : MonoBehaviour
         }
         else
         {
-            float progress = (Time.time - lastCast) / coolDownTime;
+            float progress = 1 - (Time.time - lastCast) / coolDownTime;
             loaderBracelet.GetComponent<Material>().SetColor("_Color", Color.Lerp(Color.black, initialColor, progress));
             able = false;
         }
