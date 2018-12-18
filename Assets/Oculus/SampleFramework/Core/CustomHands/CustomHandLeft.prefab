@@ -1080,6 +1080,8 @@ GameObject:
   - component: {fileID: 5460176}
   - component: {fileID: 11438496}
   - component: {fileID: 11427812}
+  - component: {fileID: 4901891173560321602}
+  - component: {fileID: 1071952017454783563}
   m_Layer: 0
   m_Name: CustomHandLeft
   m_TagString: Untagged
@@ -1159,6 +1161,50 @@ MonoBehaviour:
   m_controller: 1
   m_animator: {fileID: 95022414942611548}
   m_defaultGrabPose: {fileID: 11437176, guid: 35525acb4c3b75c4a8c4dc2c117427be, type: 3}
+--- !u!114 &4901891173560321602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28ed1e0635a9734c957b673e8b5796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowdownFactor: 0.05
+  slowdownLength: 1.6
+--- !u!114 &1071952017454783563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c394a206e44b9c24ea6d9e9664ee253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4901891173560321602}
+        m_MethodName: DoSlowmotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  loaderBracelet: {fileID: 6124195627979333334}
+  coolDownTime: 4
 --- !u!1 &144252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3326,6 +3372,8 @@ GameObject:
   - component: {fileID: 4033552946265703288}
   - component: {fileID: 570394168117383596}
   - component: {fileID: 3130729040937381228}
+  - component: {fileID: 3178228233931134271}
+  - component: {fileID: 3789716137128250420}
   m_Layer: 0
   m_Name: Bracelet2
   m_TagString: Untagged
@@ -3342,7 +3390,7 @@ Transform:
   m_GameObject: {fileID: 1388392373995433389}
   m_LocalRotation: {x: -0.000000029802319, y: 0.000000026077029, z: 0.0000000037252899,
     w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2339394589045508849}
@@ -3393,6 +3441,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3178228233931134271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388392373995433389}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2.000002, z: 1.21}
+  m_Center: {x: 0.000000029802337, y: 4.6185278e-14, z: -0.0000004470349}
+--- !u!114 &3789716137128250420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388392373995433389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33888ef248c5fb9448edfade00d3a103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillToCast:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &6124195627979333334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,6 +3482,8 @@ GameObject:
   - component: {fileID: 2339394589045508849}
   - component: {fileID: 6150222140451605984}
   - component: {fileID: 767113433020782333}
+  - component: {fileID: 7365039488123562352}
+  - component: {fileID: 325723062180813005}
   m_Layer: 0
   m_Name: Bracelet1
   m_TagString: Untagged
@@ -3472,6 +3552,47 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7365039488123562352
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124195627979333334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2.0000017, z: 1.21}
+  m_Center: {x: 1.4210855e-14, y: 5.3290705e-14, z: -0.0000003278256}
+--- !u!114 &325723062180813005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124195627979333334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33888ef248c5fb9448edfade00d3a103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillToCast:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1071952017454783563}
+        m_MethodName: UseSkill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &6844788803950486263
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,6 +3604,8 @@ GameObject:
   - component: {fileID: 9184359923890396491}
   - component: {fileID: 1334418800160693225}
   - component: {fileID: 8195136365268212259}
+  - component: {fileID: 3164605334863485997}
+  - component: {fileID: 6101073965678133978}
   m_Layer: 0
   m_Name: Bracelet3
   m_TagString: Untagged
@@ -3499,7 +3622,7 @@ Transform:
   m_GameObject: {fileID: 6844788803950486263}
   m_LocalRotation: {x: -0.000000029802319, y: -0.000000014901159, z: -0.0000000037252899,
     w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 1.0000004, y: 1.000001, z: 1.0000007}
   m_Children: []
   m_Father: {fileID: 2339394589045508849}
@@ -3550,3 +3673,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3164605334863485997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844788803950486263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2.000002, z: 1.21}
+  m_Center: {x: 0.000000029802337, y: 0.0000038146973, z: -0.00000038743025}
+--- !u!114 &6101073965678133978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844788803950486263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33888ef248c5fb9448edfade00d3a103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillToCast:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
