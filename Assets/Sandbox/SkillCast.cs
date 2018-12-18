@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class CoolDown : MonoBehaviour
+
+public class SkillCast : MonoBehaviour
 {
-    public GameObject action;
+    public UnityEvent action;
     public GameObject loaderBracelet;
     public float coolDownTime;
 
     private float lastCast;
-    private bool able;
+    private bool able = false;
     private Color initialColor;
 
     private void Start()
     {
+        able = true;
         Color initialColor = loaderBracelet.GetComponent<Material>().GetColor("_Color");
     }
 
@@ -36,5 +39,13 @@ public class CoolDown : MonoBehaviour
     {
         able = false;
         lastCast = Time.time;
+    }
+    public void UseSkill()
+    {
+        if (action != null && able)
+        {
+            action.Invoke();
+            Wait();
+        }
     }
 }
