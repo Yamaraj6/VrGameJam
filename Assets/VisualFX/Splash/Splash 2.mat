@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Splash 1
+  m_Name: Splash 2
   m_Shader: {fileID: 4800000, guid: a3f538090effa78418bd94b6b5278f20, type: 3}
   m_ShaderKeywords: _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING _DISABLE_DECALS
     _MATERIAL_FEATURE_TRANSMISSION _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_455C1E5E:
-        m_Texture: {fileID: 2800000, guid: 006a09eafa0cf154c953e6fcba105894, type: 3}
+        m_Texture: {fileID: 2800000, guid: a19108b7732b48b42ac7fd713a24c456, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
