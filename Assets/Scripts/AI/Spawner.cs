@@ -36,6 +36,7 @@ public class Spawner : MonoBehaviour
         Vector3 newPos = RandomCircle(targetPlanet.position, minRadius, maxRadius, offsetZAxis);
         GameObject newEnemy = Instantiate(enemySpaceshipPrefab, newPos, Quaternion.identity);
         newEnemy.GetComponent<SpaceShip>().Initialize(enemyAlienPrefab, speedSpaceship, frequencyAlienLanding);
+        GameController.AddSpaceshipToList(newEnemy.transform);
     } 
     private Vector3 RandomCircle(Vector3 center, float minRadius, float maxRadius, float offsetZAxis = 0){
          float ang = Random.value * 360;

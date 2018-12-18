@@ -88,6 +88,7 @@ public class SpaceShip : MonoBehaviour
         GameObject newAlien = Instantiate(enemyAlienPrefab,landingPosition,Quaternion.identity);
         newAlien.transform.SetParent(targetPlanet);
         newAlien.GetComponent<Alien>().Initialize();    
+        GameController.AddAlienToList(newAlien.transform);
     }
 
 
