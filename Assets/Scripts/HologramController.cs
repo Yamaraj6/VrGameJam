@@ -7,6 +7,7 @@ public class HologramController : MonoBehaviour
     [SerializeField] private Transform giantPlanet;
     [SerializeField] private Transform hologramPlanet;
 
+    [SerializeField] private Transform hologramParent;
     [SerializeField] private GameObject hologramSpaceship;
     [SerializeField] private GameObject addHologramEffect;
     [SerializeField] private GameObject destroyHologramEffect;
@@ -45,7 +46,7 @@ public class HologramController : MonoBehaviour
                           ((spaceships[spaceships.Count - 1].transform.position +
                             spaceships[spaceships.Count - 1].transform.position) * scale);
         var holoRotation = spaceships[spaceships.Count - 1].transform.rotation;
-        holoSpaceships.Add(Instantiate(hologramSpaceship.transform, holoPostion, holoRotation));
+        holoSpaceships.Add(Instantiate(hologramSpaceship.transform, holoPostion, holoRotation, hologramParent));
         //addHologramEffect
     }
 

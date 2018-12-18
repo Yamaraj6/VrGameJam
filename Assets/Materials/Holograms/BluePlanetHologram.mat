@@ -222,8 +222,8 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
-    - Color_29C854FC: {r: 0, g: 1, b: 0.9850209, a: 0}
-    - Color_EB58368C: {r: 0, g: 0.2694857, b: 1, a: 0}
+    - Color_29C854FC: {r: 0.10980392, g: 2.9960785, b: 1.5843138, a: 0}
+    - Color_EB58368C: {r: 0, g: 0.5411765, b: 2, a: 0}
     - Vector2_B8566C26: {r: 1, g: 3, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
