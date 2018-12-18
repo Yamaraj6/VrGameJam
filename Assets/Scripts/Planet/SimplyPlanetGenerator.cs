@@ -8,10 +8,15 @@ public class SimplyPlanetGenerator : MonoBehaviour
 
 
 
-    public void CreatePlanet(){
+    public Planet CreatePlanet(){
         Transform targetPlanet = GameController.Instance.targetPlanet;
         int index = Random.Range(0, planets.Length);
         GameObject newPlanet = Instantiate(planets[index], targetPlanet.position, Quaternion.identity);
         newPlanet.transform.SetParent(targetPlanet);
+        Planet planetScript = newPlanet.GetComponent<Planet>();
+        if (!planetScript){
+            planetScript = newPlanet.AddComponent<Planet>();
+        }
+        return planetScript;
     }
 }

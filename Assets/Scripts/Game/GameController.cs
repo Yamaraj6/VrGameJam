@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
 
     public static GameController Instance{ get; private set;}
+    public Planet currentPlanet {get; private set;}
     public Spawner spawner;
     public SimplyPlanetGenerator planetGenerator;
 
@@ -21,6 +22,6 @@ public class GameController : MonoBehaviour
 
     private void Start(){
         spawner.StartSpawn();
-        planetGenerator.CreatePlanet();
+        currentPlanet = planetGenerator.CreatePlanet();
     }
 }

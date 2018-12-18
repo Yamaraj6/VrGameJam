@@ -28,6 +28,7 @@ public class SpaceShip : MonoBehaviour
         startPosition = transform.position;
         endPosition = targetPlanet.position;
         journeyLength = Vector3.Distance(transform.position, targetPlanet.position);
+        startTime = Time.time;
     }
     
     private void OnTriggerEnter(Collider collider){
@@ -57,6 +58,7 @@ public class SpaceShip : MonoBehaviour
     private void StartLanding(){
         // rotate ship face to planet
         transform.LookAt(targetPlanet,Vector3.up);
+        transform.Rotate(Vector3.left * 90.0f, Space.Self);
         // start animation landing
         // animator.SetTrigger("Landing");
         // create aliens
