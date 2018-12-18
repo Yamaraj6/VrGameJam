@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public float maxRadius;
     public float offsetZAxis;
     public float speedSpaceship;
+    public float speedAlien;
     public float frequencySpaceship;
     public float frequencyAlienLanding;
     private float startTime;
@@ -33,12 +34,13 @@ public class Spawner : MonoBehaviour
     }
 
     private void SpawnEnemy(){
-        Vector3 newPos = RandomCircle(targetPlanet.position, minRadius, maxRadius, offsetZAxis);
+        //Vector3 newPos = RandomCircle(targetPlanet.position, minRadius, maxRadius, offsetZAxis);
+        Vector3 newPos = RandomSphere(targetPlanet.position, minRadius, maxRadius);
         GameObject newEnemy = Instantiate(enemySpaceshipPrefab, newPos, Quaternion.identity);
         newEnemy.GetComponent<SpaceShip>().Initialize(enemyAlienPrefab, speedSpaceship, frequencyAlienLanding);
         GameController.AddSpaceshipToList(newEnemy.transform);
     } 
-    private Vector3 RandomCircle(Vector3 center, float minRadius, float maxRadius, float offsetZAxis = 0){
+   /*  private Vector3 RandomCircle(Vector3 center, float minRadius, float maxRadius, float offsetZAxis = 0){
          float ang = Random.value * 360;
          float deltaRadius = Random.Range(minRadius, maxRadius);
          Vector3 pos;
@@ -52,8 +54,11 @@ public class Spawner : MonoBehaviour
          }
 
          return pos;
-     }
-
+   }*/
+    private Vector3 RandomSphere(Vector3 center, float minRadius, float maxRadius){
+        float deltaRadius = Random.Range(maxRadius, minRadius);
+        return center + Random.onUnitSphere * deltaRadius;
+    }
     void OnDrawGizmosSelected()
     {
         if (targetPlanet){

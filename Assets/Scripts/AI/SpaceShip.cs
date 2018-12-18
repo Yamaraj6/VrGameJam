@@ -10,7 +10,6 @@ public class SpaceShip : MonoBehaviour
     private float startTime;
     private float frequencyAlienLanding;
     private bool canLanding;
-    private Vector3 landingPosition;
 
     // fly variables
     private float speed;
@@ -33,7 +32,6 @@ public class SpaceShip : MonoBehaviour
     
     private void OnTriggerEnter(Collider collider){
         if (collider.CompareTag("PlanetAtmosphere")){
-            transform.SetParent(targetPlanet);
             StartLanding();
         }
     }
@@ -42,7 +40,7 @@ public class SpaceShip : MonoBehaviour
         if (canLanding){
             if (Time.time > startTime + frequencyAlienLanding){
                 startTime = Time.time;
-                CreateAlien();
+                PrepareToLanding();
             }
         }else{
             MoveToPlanet();
@@ -56,19 +54,18 @@ public class SpaceShip : MonoBehaviour
         transform.position = Vector3.Lerp(startPosition, endPosition, fracJourney);
     }
     private void StartLanding(){
+        transform.SetParent(GameController.Instance.currentPlanet.transform);
         // rotate ship face to planet
         transform.LookAt(targetPlanet,Vector3.up);
         transform.Rotate(Vector3.left * 90.0f, Space.Self);
         // start animation landing
         // animator.SetTrigger("Landing");
         // create aliens
-        if(PrepareToLanding()){
-            canLanding = true;
-            startTime = Time.time;
-        }
+        canLanding = true;
+        startTime = Time.time;
     }
 
-    private bool PrepareToLanding(){
+    private void PrepareToLanding(){
         // get planet surface point where aliens will be spawn
         RaycastHit[] hits;
         Vector3 direction = (targetPlanet.position - transform.position).normalized;
@@ -77,16 +74,14 @@ public class SpaceShip : MonoBehaviour
 
         foreach(RaycastHit obj in hits){
             if (obj.collider.CompareTag("Planet")){
-                landingPosition = obj.point;
-                return true;
+                CreateAlien(obj.point);
             }
         }
-        return false;
     }
 
-    private void CreateAlien(){
-        GameObject newAlien = Instantiate(enemyAlienPrefab,landingPosition,Quaternion.identity);
-        newAlien.transform.SetParent(targetPlanet);
+    private void CreateAlien(Vector3 spawnPoint){
+        GameObject newAlien = Instantiate(enemyAlienPrefab, spawnPoint, Quaternion.identity);
+        newAlien.transform.SetParent(GameController.Instance.currentPlanet.transform);
         newAlien.GetComponent<Alien>().Initialize();    
         GameController.AddAlienToList(newAlien.transform);
     }

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51617958e8a14747bfd824d42640df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  targetPlanet: {fileID: 0}
 --- !u!54 &7521221591450859428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -74,8 +74,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1001 &2376433271297313821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 6dfc0334aef18044ca5eb6c42c1d09c6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8807e2e7a447dfc489cd86f3be07fd11, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dfc0334aef18044ca5eb6c42c1d09c6, type: 3}
 --- !u!4 &2376433271297709725 stripped
