@@ -14,7 +14,7 @@ public class CoolDown : MonoBehaviour
 
     private void Start()
     {
-        Color initialColor = loaderBracelet.GetComponent<SpriteRenderer>().color;
+        Color initialColor = loaderBracelet.GetComponent<Material>().GetColor("_Color");
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class CoolDown : MonoBehaviour
         else
         {
             float progress = (Time.time - lastCast) / coolDownTime;
-            loaderBracelet.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.black, initialColor, progress);
+            loaderBracelet.GetComponent<Material>().SetColor("_Color", Color.Lerp(Color.black, initialColor, progress));
             able = false;
         }
     }
