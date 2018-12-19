@@ -343,6 +343,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47bbdde86ffd8f54e92ed8957ec146ac, type: 3}
+--- !u!1 &816800282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430211778720219764, guid: 47bbdde86ffd8f54e92ed8957ec146ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 816800281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1492649733
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727360086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.323, y: 0, z: 1.296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -678,8 +684,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  loaderBracelet: {fileID: 0}
-  coolDownTime: 0
+  loaderBracelet: {fileID: 816800282}
+  coolDownTime: 54
 --- !u!1 &1729247513
 GameObject:
   m_ObjectHideFlags: 0
