@@ -11,7 +11,7 @@ public class GestureRecognition : MonoBehaviour
    
     private OVRInput.Axis1D indexTrigger;
     private OVRInput.Axis1D handTrigger;
-
+    
     private void Awake()
     {
         switch (hand)
