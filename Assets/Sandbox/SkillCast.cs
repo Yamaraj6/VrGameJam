@@ -17,6 +17,7 @@ public class SkillCast : MonoBehaviour
 
     private void Start()
     {
+        lastCast = Time.time;
         able = true;
         mat = new Material(Shader.Find("Custom/TinterShader"));
         loaderBracelet.GetComponent<MeshRenderer>().material = mat;
