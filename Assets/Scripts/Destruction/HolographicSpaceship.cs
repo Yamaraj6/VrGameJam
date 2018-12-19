@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HolographicSpaceship : MonoBehaviour, IDamageHandler
 {
     private Transform spaceShip;
-    private HealthController spaceShipHealthController;
+    [SerializeField] private HealthController spaceShipHealthController;
     [SerializeField] private Image healthPanel;
 
     public void Initialize(Transform originalSpaceShip)
