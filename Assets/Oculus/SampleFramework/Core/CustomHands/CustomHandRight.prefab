@@ -3266,6 +3266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6747532051631210792}
   - component: {fileID: 7981996174019918943}
+  - component: {fileID: 1195226083}
   m_Layer: 0
   m_Name: StraightFingerCollider
   m_TagString: StraightFinger
@@ -3300,6 +3301,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02, z: 0.05}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1195226083
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241129709969432693}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2749952171726382540
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,6 +3327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204775160544020392}
   - component: {fileID: 9143997409065756135}
+  - component: {fileID: 1681306369}
   m_Layer: 0
   m_Name: FistCollider
   m_TagString: Fist
@@ -3344,6 +3362,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 0.04, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1681306369
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749952171726382540}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3118491066932186267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3354,6 +3388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1497329473670318842}
   - component: {fileID: 1070692951800546501}
+  - component: {fileID: 1185243932}
   m_Layer: 0
   m_Name: OpenHandCollider
   m_TagString: OpenHand
@@ -3388,6 +3423,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.04, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1185243932
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118491066932186267}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6745632837264760454
 GameObject:
   m_ObjectHideFlags: 0

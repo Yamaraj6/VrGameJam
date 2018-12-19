@@ -16,6 +16,8 @@ public class HandCollisionDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag(handColliderTag))
         {
+            Debug.Log(other.relativeVelocity.magnitude);
+            Debug.Log(other.relativeVelocity);
             damageHandler.GetDamage(other.relativeVelocity.magnitude);
         }
     }
