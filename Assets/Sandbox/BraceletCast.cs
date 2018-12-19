@@ -10,6 +10,7 @@ public class BraceletCast : MonoBehaviour
     private void OnTriggerEnter(Collider other) { 
         if (other.CompareTag("StraightFinger"))
         {
+            Debug.Log("TriggerEnter" + gameObject.name);
             skillToCast.Invoke();
         }
     }
