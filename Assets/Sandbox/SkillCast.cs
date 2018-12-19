@@ -12,14 +12,21 @@ public class SkillCast : MonoBehaviour
 
     private float lastCast;
     private bool able = false;
-    private Color initialColor;
+    public Color initialColor;
+    Material mat;
 
     private void Start()
     {
         able = true;
-        Color initialColor = loaderBracelet.GetComponent<MeshRenderer>().materials[0].GetColor("Tint");
+        mat = new Material(Shader.Find("Custom/TinterShader"));
+        loaderBracelet.GetComponent<MeshRenderer>().material = mat;
     }
 
+
+    void SetMask(Material targetMaterial, Color color)
+    {
+        targetMaterial.SetColor("_Color", color);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -30,7 +37,7 @@ public class SkillCast : MonoBehaviour
         else
         {
             float progress = 1 - (Time.time - lastCast) / coolDownTime;
-            loaderBracelet.GetComponent<MeshRenderer>().materials[0].SetColor("Tint", Color.Lerp(Color.black, initialColor, progress));
+            SetMask(mat, Color.Lerp(Color.black, initialColor, progress));
             able = false;
         }
     }
