@@ -37,7 +37,7 @@ public class SkillCast : MonoBehaviour
         }
         else
         {
-            float progress = 1 - (Time.time - lastCast) / coolDownTime;
+            float progress = (Time.time - lastCast) / coolDownTime;
             SetMask(mat, Color.Lerp(Color.black, initialColor, progress));
             able = false;
         }
@@ -52,6 +52,7 @@ public class SkillCast : MonoBehaviour
     {
         if (action != null && able)
         {
+            SetMask(mat, Color.black);
             action.Invoke();
             Wait();
         }
