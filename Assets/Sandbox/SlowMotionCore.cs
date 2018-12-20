@@ -13,6 +13,7 @@ public class SlowMotionCore : MonoBehaviour
 
     public void DoSlowmotion()
     {
+        Debug.Log("Doin slomo");
         Time.timeScale = slowdownFactor;
         Time.fixedDeltaTime = Time.timeScale * .02f;
     }
