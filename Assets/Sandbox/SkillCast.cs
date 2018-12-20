@@ -6,21 +6,27 @@ using UnityEngine.Events;
 
 public class SkillCast : MonoBehaviour
 {
-    public UnityEvent action;
-    public GameObject loaderBracelet;
-    public float coolDownTime;
+    public UnityEvent[] action;
+    public GameObject[] loaderBracelet;
+    public float[] coolDownTime;
 
-    private float lastCast;
-    private bool able = false;
-    public Color initialColor;
-    Material mat;
+    private float[] lastCast;
+    private bool[] able;
+    public Color[] initialColor;
+    Material[] mat;
 
     private void Start()
     {
-        lastCast = Time.time;
-        able = true;
-        mat = new Material(Shader.Find("Custom/TinterShader"));
-        loaderBracelet.GetComponent<MeshRenderer>().material = mat;
+        mat = new Material[loaderBracelet.Length];
+        able = new bool[loaderBracelet.Length];
+
+        for (int i = 0; i < loaderBracelet.Length; i++)
+        {
+            lastCast[i] = Time.time;
+            able[i] = true;
+            mat[i] = new Material(Shader.Find("Custom/TinterShader"));
+            loaderBracelet[i].GetComponent<MeshRenderer>().material = mat[i];
+        }
     }
 
 
@@ -31,30 +37,42 @@ public class SkillCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((lastCast + coolDownTime) < Time.time)
+        for (int i = 0; i < loaderBracelet.Length; i++)
         {
-            able = true;
-        }
-        else
-        {
-            float progress = (Time.time - lastCast) / coolDownTime;
-            SetMask(mat, Color.Lerp(Color.black, initialColor, progress));
-            able = false;
+            if ((lastCast[i] + coolDownTime[i]) < Time.time)
+            {
+                able[i] = true;
+            }
+            else
+            {
+                float progress = (Time.time - lastCast[i]) / coolDownTime[i];
+                SetMask(mat[i], Color.Lerp(Color.black, initialColor[i], progress));
+                able[i] = false;
+            }
         }
     }
 
-    void Wait()
+    void Wait(int i)
     {
-        able = false;
-        lastCast = Time.time;
+        able[i] = false;
+        lastCast[i] = Time.time;
     }
-    public void UseSkill()
+    public void UseSkill(int i)
     {
-        if (action != null && able)
+        if (action[i] != null && able[i])
         {
-            SetMask(mat, Color.black);
-            action.Invoke();
-            Wait();
+            switch (i)
+            {
+                case 1:
+                    SetMask(mat[i], Color.black);
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+            }
+            action[i].Invoke();
+            Wait(i);
         }
     }
 }
