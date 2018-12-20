@@ -29,13 +29,7 @@ public class SkillCast : MonoBehaviour
             loaderBracelet[i].GetComponent<MeshRenderer>().material = mat[i];
         }
     }
-
-
-    void SetMask(Material targetMaterial, Color color)
-    {
-        targetMaterial.SetColor("_Color", color);
-    }
-    // Update is called once per frame
+    
     void Update()
     {
         for (int i = 0; i < loaderBracelet.Length; i++)
@@ -50,9 +44,16 @@ public class SkillCast : MonoBehaviour
                 SetMask(mat[i], Color.Lerp(Color.black, initialColor[i], progress));
                 able[i] = false;
             }
+            if ((lastCast[i] + 1 > Time.time)) {
+                able = new bool[loaderBracelet.Length];
+            }
         }
     }
 
+    void SetMask(Material targetMaterial, Color color)
+    {
+        targetMaterial.SetColor("_Color", color);
+    }
     void Wait(int i)
     {
         able[i] = false;
