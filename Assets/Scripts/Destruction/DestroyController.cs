@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DestroyController : MonoBehaviour, IDestroyable
@@ -12,6 +13,7 @@ public class DestroyController : MonoBehaviour, IDestroyable
     private void Start()
     {
         isDestroyed = false;
+        states = states.OrderBy(state => state.healthInPercents).ToList();
     }
 
     public void UpdateDestroyState(float currentHealthInPercents)
@@ -20,19 +22,17 @@ public class DestroyController : MonoBehaviour, IDestroyable
         {
             if (currentHealthInPercents <= destroyState.healthInPercents)
             {
-                
-                if (currentHealthInPercents <= 0)
-                {
-                    Destroy();
-                    return;
-                }
-                
                 if (currentState != destroyState)
                 {
                     currentState = destroyState;
                     DeactiveAllDestroyStates();
                     destroyState.state.SetActive(true);
+                    if (currentHealthInPercents <= 0)
+                    {
+                        Destroy();
+                    }
                 }
+                return;
             }
         }
     }
