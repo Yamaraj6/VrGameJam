@@ -19,6 +19,7 @@ public class SkillCast : MonoBehaviour
     {
         mat = new Material[loaderBracelet.Length];
         able = new bool[loaderBracelet.Length];
+        lastCast = new float[loaderBracelet.Length];
 
         for (int i = 0; i < loaderBracelet.Length; i++)
         {
@@ -71,8 +72,12 @@ public class SkillCast : MonoBehaviour
                 case 3:
                     break;
             }
+		Debug.Log("skill " + i + " casted");
             action[i].Invoke();
             Wait(i);
         }
+	else {
+	Debug.Log("skill " +i+ " couldn't be casted");
+	}
     }
 }

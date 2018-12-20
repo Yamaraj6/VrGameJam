@@ -1204,11 +1204,33 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4901891173560321602}
+        m_MethodName: DoSlowmotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4901891173560321602}
+        m_MethodName: DoSlowmotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   loaderBracelet:
@@ -3429,7 +3451,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillToCast:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071952017454783563}
+        m_MethodName: UseSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!54 &2927239928086338080
@@ -3474,8 +3507,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3648750473198013252}
-  m_LocalRotation: {x: 0.06773782, y: -0.00033326997, z: 0.005738256, w: 0.9976866}
-  m_LocalPosition: {x: -0.0452, y: -0.0242, z: 0.0715}
+  m_LocalRotation: {x: 0.06773793, y: -0.00033323735, z: 0.0057380493, w: 0.9976866}
+  m_LocalPosition: {x: -0.045200046, y: -0.024200015, z: 0.0715}
   m_LocalScale: {x: 1.0000005, y: 1.0000005, z: 1}
   m_Children: []
   m_Father: {fileID: 907658592800486383}
@@ -3519,12 +3552,12 @@ ParentConstraint:
   m_GameObject: {fileID: 3648750473198013252}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: -0.0452, y: -0.0242, z: 0.0715}
-  m_RotationAtRest: {x: 7.768227, y: 0.0064994534, z: 0.65951407}
+  m_TranslationAtRest: {x: -0.04520002, y: -0.024200005, z: 0.07149999}
+  m_RotationAtRest: {x: 7.7682285, y: 0.006501672, z: 0.65950114}
   m_TranslationOffsets:
-  - {x: -0.045200035, y: -0.024200015, z: 0.07149999}
+  - {x: -0.045200057, y: -0.024200022, z: 0.07149999}
   m_RotationOffsets:
-  - {x: 7.7682285, y: 0.00650088, z: 0.6595007}
+  - {x: 7.7682295, y: 0.006502385, z: 0.6594935}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -3612,8 +3645,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5996901220404608800}
-  m_LocalRotation: {x: 0.10654869, y: 0.0000000027494595, z: 0.000000030650572, w: 0.9943075}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0104}
+  m_LocalRotation: {x: 0.106549084, y: -0, z: -0, w: 0.99430746}
+  m_LocalPosition: {x: 0.000000008149069, y: -0.0000000090803915, z: -0.010400006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 907658592800486383}
@@ -3657,12 +3690,12 @@ ParentConstraint:
   m_GameObject: {fileID: 5996901220404608800}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 0, z: -0.0104}
-  m_RotationAtRest: {x: 12.232814, y: 0, z: 0}
+  m_TranslationAtRest: {x: 0, y: 0, z: -0.010400003}
+  m_RotationAtRest: {x: 12.232837, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: 0, z: -0.010400001}
+  - {x: 0, y: 0, z: -0.010400005}
   m_RotationOffsets:
-  - {x: 12.232816, y: 0, z: 0}
+  - {x: 12.232839, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -3786,7 +3819,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1071952017454783563}
         m_MethodName: UseSkill
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3921,7 +3954,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillToCast:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071952017454783563}
+        m_MethodName: UseSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!54 &4059790220133702761
@@ -3966,8 +4010,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8685970174413925616}
-  m_LocalRotation: {x: 0.07487989, y: -0.068926096, z: 0.0051881974, w: 0.99479413}
-  m_LocalPosition: {x: 0, y: 0.0008, z: 0.0248}
+  m_LocalRotation: {x: 0.07488005, y: -0.06892618, z: 0.0051882043, w: 0.9947941}
+  m_LocalPosition: {x: 0.0000000083819, y: 0.00079999276, z: 0.024800003}
   m_LocalScale: {x: 1.0000005, y: 1.0000005, z: 1}
   m_Children: []
   m_Father: {fileID: 907658592800486383}
@@ -4011,12 +4055,12 @@ ParentConstraint:
   m_GameObject: {fileID: 8685970174413925616}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 0.0008, z: 0.0248}
-  m_RotationAtRest: {x: 8.609278, y: -7.9270163, z: 0}
+  m_TranslationAtRest: {x: 0, y: 0.0007999965, z: 0.024800003}
+  m_RotationAtRest: {x: 8.609284, y: -7.9270244, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: 0.00080000237, z: 0.0248}
+  - {x: 0, y: 0.00079999864, z: 0.024800003}
   m_RotationOffsets:
-  - {x: 8.609281, y: -7.9270153, z: 0}
+  - {x: 8.609289, y: -7.927028, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
