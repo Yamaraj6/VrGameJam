@@ -1082,6 +1082,8 @@ GameObject:
   - component: {fileID: 11427812}
   - component: {fileID: 4901891173560321602}
   - component: {fileID: 1071952017454783563}
+  - component: {fileID: 8863094230410008272}
+  - component: {fileID: 1524407282911314512}
   m_Layer: 0
   m_Name: CustomHandLeft
   m_TagString: Untagged
@@ -1205,7 +1207,69 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   loaderBracelet: {fileID: 6124195627979333334}
   coolDownTime: 4
-  initialColor: {r: 0, g: 0, b: 0, a: 0}
+  initialColor: {r: 0.7225559, g: 1, b: 0, a: 0}
+--- !u!114 &8863094230410008272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c394a206e44b9c24ea6d9e9664ee253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4901891173560321602}
+        m_MethodName: DoSlowmotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  loaderBracelet: {fileID: 1388392373995433389}
+  coolDownTime: 4
+  initialColor: {r: 1, g: 0.7734498, b: 0, a: 0}
+--- !u!114 &1524407282911314512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c394a206e44b9c24ea6d9e9664ee253e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4901891173560321602}
+        m_MethodName: DoSlowmotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  loaderBracelet: {fileID: 6844788803950486263}
+  coolDownTime: 4
+  initialColor: {r: 0, g: 1, b: 0.525, a: 1}
 --- !u!1 &144252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,9 +3569,9 @@ ParentConstraint:
   m_TranslationAtRest: {x: -0.0452, y: -0.0242, z: 0.0715}
   m_RotationAtRest: {x: 7.768227, y: 0.0064994534, z: 0.65951407}
   m_TranslationOffsets:
-  - {x: -0.04520002, y: -0.0242, z: 0.071499996}
+  - {x: -0.045200035, y: -0.024200015, z: 0.07149999}
   m_RotationOffsets:
-  - {x: 7.7682285, y: 0.00650269, z: 0.6595008}
+  - {x: 7.7682285, y: 0.00650088, z: 0.6595007}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
@@ -3719,7 +3783,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d3ae86deb2c355644877566f36e55d8f, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3999,7 +4063,7 @@ ParentConstraint:
   m_TranslationOffsets:
   - {x: 0, y: 0.00080000237, z: 0.0248}
   m_RotationOffsets:
-  - {x: 8.609279, y: -7.9270144, z: 0}
+  - {x: 8.609281, y: -7.9270153, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
