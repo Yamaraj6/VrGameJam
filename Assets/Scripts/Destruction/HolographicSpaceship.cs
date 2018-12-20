@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HolographicSpaceship : MonoBehaviour, IDamageHandler
+public class HolographicSpaceship : ADamageHandler
 {
     [SerializeField] private OriginalSpaceship originalSpaceship;
     [SerializeField] private Image healthPanel;
@@ -13,7 +13,7 @@ public class HolographicSpaceship : MonoBehaviour, IDamageHandler
         this.originalSpaceship = originalSpaceship;
     }
 
-    public void DealDamage(float damage)
+    public override void DealDamage(float damage)
     {
         originalSpaceship.DealDamage(damage);
         if (originalSpaceship.IsDestroyed())

@@ -150,6 +150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4094015066488202640, guid: 31b3c67d66151cf40a6e5da55c3ed9cd,
         type: 3}
+      propertyPath: damageHandler
+      value: 
+      objectReference: {fileID: 743571899}
+    - target: {fileID: 4094015066488202640, guid: 31b3c67d66151cf40a6e5da55c3ed9cd,
+        type: 3}
       propertyPath: damageMultiplier
       value: 5
       objectReference: {fileID: 0}
