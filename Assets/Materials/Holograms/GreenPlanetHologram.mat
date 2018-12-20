@@ -224,7 +224,7 @@ Material:
     m_Colors:
     - Color_29C854FC: {r: 0, g: 16.94838, b: 16.770908, a: 0}
     - Color_EB58368C: {r: 0, g: 11.984314, b: 1.5058824, a: 0}
-    - Vector2_B8566C26: {r: 1, g: 3, b: 0, a: 0}
+    - Vector2_B8566C26: {r: 1, g: 0.2, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
