@@ -44,9 +44,15 @@ public class SkillCast : MonoBehaviour
                 SetMask(mat[i], Color.Lerp(Color.black, initialColor[i], progress));
                 able[i] = false;
             }
-            if ((lastCast[i] + 1 > Time.time)) {
+          
+        }
+        for (int i = 0; i < loaderBracelet.Length; i++)
+        {
+            if ((lastCast[i] + 1 > Time.time))
+            {
                 able = new bool[loaderBracelet.Length];
             }
+
         }
     }
 
