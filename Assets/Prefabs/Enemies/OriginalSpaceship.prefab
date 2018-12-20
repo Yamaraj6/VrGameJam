@@ -5117,7 +5117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6818192457275852000, guid: 55a5e7bdd811f47449f1aae84c106b3f,
         type: 3}
-      propertyPath: spaceshipModel
+      propertyPath: model
       value: 
       objectReference: {fileID: 7017990789545571112}
     - target: {fileID: 6818192457275852000, guid: 55a5e7bdd811f47449f1aae84c106b3f,

@@ -13,9 +13,9 @@ public class HolographicSpaceship : ADamageHandler
         this.originalSpaceship = originalSpaceship;
     }
 
-    public override void DealDamage(float damage)
+    public override void DealDamage(float damage, DamageType damageType)
     {
-        originalSpaceship.DealDamage(damage);
+        originalSpaceship.DealDamage(damage, damageType);
         if (originalSpaceship.IsDestroyed())
         {
             gameObject.SetActive(false);
