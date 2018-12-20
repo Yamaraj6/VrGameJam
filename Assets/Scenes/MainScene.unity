@@ -1618,6 +1618,30 @@ PrefabInstance:
       propertyPath: m_parentHeldObject
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1195226081, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].x
+      value: 0.024199992
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195226081, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: 0.0799
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681306367, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: -0.010400005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681306367, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
+      propertyPath: m_RotationOffsets.Array.data[0].x
+      value: 12.232816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185243930, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: 0.024799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185243930, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
+      propertyPath: m_RotationOffsets.Array.data[0].x
+      value: 8.609277
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
 --- !u!4 &911228601 stripped
@@ -7676,6 +7700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909469548}
   - component: {fileID: 1909469547}
+  - component: {fileID: 1909469549}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -7715,6 +7740,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1909469549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909469546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63950df7c8367842865052084ab3a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states: []
 --- !u!1 &1915215149
 GameObject:
   m_ObjectHideFlags: 0
@@ -7881,6 +7919,16 @@ PrefabInstance:
       propertyPath: m_RotationOffsets.Array.data[0].x
       value: 7.76824
       objectReference: {fileID: 0}
+    - target: {fileID: 2105074524358545402, guid: e6ba3498ffa1e534b91a07264266e6b8,
+        type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: -0.010400005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105074524358545402, guid: e6ba3498ffa1e534b91a07264266e6b8,
+        type: 3}
+      propertyPath: m_RotationOffsets.Array.data[0].x
+      value: 12.23286
+      objectReference: {fileID: 0}
     - target: {fileID: 5274263962687976223, guid: e6ba3498ffa1e534b91a07264266e6b8,
         type: 3}
       propertyPath: m_RotationOffsets.Array.data[0].x
@@ -7900,16 +7948,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
       value: 0.024800003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105074524358545402, guid: e6ba3498ffa1e534b91a07264266e6b8,
-        type: 3}
-      propertyPath: m_TranslationOffsets.Array.data[0].z
-      value: -0.010400005
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105074524358545402, guid: e6ba3498ffa1e534b91a07264266e6b8,
-        type: 3}
-      propertyPath: m_RotationOffsets.Array.data[0].x
-      value: 12.23286
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
