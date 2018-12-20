@@ -5,7 +5,9 @@ using UnityEngine;
 public class HandCollisionDetector : MonoBehaviour
 {
     [SerializeField] private string handColliderTag;
+    [Range(0, 25)] [SerializeField] private float damageMultiplier=1;
     private IDamageHandler damageHandler;
+    
     
     private void Awake()
     {
@@ -16,9 +18,8 @@ public class HandCollisionDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag(handColliderTag))
         {
-            Debug.Log(other.relativeVelocity.magnitude);
-            Debug.Log(other.relativeVelocity);
-            damageHandler.GetDamage(other.relativeVelocity.magnitude);
+            Debug.Log("Damage done: "+other.relativeVelocity);
+            damageHandler.GetDamage(damageMultiplier*other.relativeVelocity.magnitude);
         }
     }
 }

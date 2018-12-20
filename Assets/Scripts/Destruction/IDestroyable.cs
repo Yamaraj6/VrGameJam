@@ -2,7 +2,7 @@
 
 public interface IDestroyable
 {
-    void SetDestroyState(float currentHealthInPercents);
+    void UpdateDestroyState(float currentHealthInPercents);
     void Destroy();
     bool IsDestroyed();
 }

@@ -39,7 +39,7 @@ public class HealthController : MonoBehaviour
             currentHealth -= damage;
         }
 
-        destroyable.SetDestroyState(currentHealth / maxHealth);
+        destroyable.UpdateDestroyState(currentHealth / maxHealth);
         if(healthPanel){healthPanel.fillAmount = currentHealth / maxHealth;}
     }
 }
