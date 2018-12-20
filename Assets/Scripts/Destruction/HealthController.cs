@@ -1,45 +1,51 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(IDestroyable))]
-public class HealthController : MonoBehaviour
+public class HealthController : MonoBehaviour, IHealth
 {
-    private ResistanceController resistanceController;
-    private IDestroyable destroyable;
-
-    [SerializeField]private Image healthPanel;
+    private Image healthPanel;
     [Range(0f, 100f)] [SerializeField] private float maxHealth;
     private float currentHealth;
 
     private void Awake()
     {
-        destroyable = GetComponent<IDestroyable>();
-        resistanceController = GetComponent<ResistanceController>();
+        ResetHealth();
+    }
+
+    public void ResetHealth()
+    {
         currentHealth = maxHealth;
         if(healthPanel){healthPanel.fillAmount = currentHealth / maxHealth;}
     }
 
-    public void SetHealthPanel(Image healtPanel)
+    public float GetMaxHealth()
     {
-        this.healthPanel = healtPanel;
-        healtPanel.fillAmount = currentHealth / maxHealth;
+        return maxHealth;
     }
 
-    public void GetDamage(float damage, DamageType damageType = DamageType.Physical)
+    public float GetCurrentHealth()
     {
-        if (resistanceController)
+        return currentHealth;
+    }
+
+    public float GetPercentageCurrentHealth()
+    {
+        return currentHealth / maxHealth * 100;
+    }
+
+    public void AddHealth(float value)
+    {
+        currentHealth += value;
+        if (currentHealth < 0)
         {
-            currentHealth -= ((ResistanceController.MAX_RESISTANCE - resistanceController.GetResistance(damageType)) /
-                ResistanceController.MAX_RESISTANCE * damage);
-        }
-        else
-        {
-            currentHealth -= damage;
+            currentHealth = 0;
         }
 
-        destroyable.UpdateDestroyState(currentHealth / maxHealth);
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        
         if(healthPanel){healthPanel.fillAmount = currentHealth / maxHealth;}
     }
 }

@@ -1,5 +1,5 @@
 ﻿
 public interface IDamageHandler
 {
-    void GetDamage(float damage);
+    void DealDamage(float damage);
 }

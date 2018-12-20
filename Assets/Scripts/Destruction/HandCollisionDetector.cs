@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
 [RequireComponent(typeof(IDamageHandler))]
 public class HandCollisionDetector : MonoBehaviour
 {
@@ -18,8 +17,8 @@ public class HandCollisionDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag(handColliderTag))
         {
-            Debug.Log("Damage done: "+other.relativeVelocity);
-            damageHandler.GetDamage(damageMultiplier*other.relativeVelocity.magnitude);
+            Debug.Log("Damage done: " + other.relativeVelocity);
+            damageHandler.DealDamage(damageMultiplier * other.relativeVelocity.magnitude);
         }
     }
 }

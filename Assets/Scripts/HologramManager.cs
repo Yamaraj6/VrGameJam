@@ -47,7 +47,7 @@ public class HologramManager : MonoBehaviour
                             spaceships[spaceships.Count - 1].transform.position) * scale);
         var holoRotation = spaceships[spaceships.Count - 1].transform.rotation;
         var hologramSpaceShip = Instantiate(hologramSpaceship.transform, holoPostion, holoRotation, hologramParent);
-        hologramSpaceShip.GetComponent<HolographicSpaceship>().Initialize(originalSpaceShip);
+        hologramSpaceShip.GetComponent<HolographicSpaceship>().Initialize(originalSpaceShip.GetComponent<OriginalSpaceship>());
         holoSpaceships.Add(hologramSpaceShip);
         //addHologramEffect
     }

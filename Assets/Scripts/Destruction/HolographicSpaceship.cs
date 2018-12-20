@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class HolographicSpaceship : MonoBehaviour, IDamageHandler
 {
-    private Transform spaceShip;
-    [SerializeField] private HealthController spaceShipHealthController;
+    [SerializeField] private OriginalSpaceship originalSpaceship;
     [SerializeField] private Image healthPanel;
 
-    public void Initialize(Transform originalSpaceShip)
+    public void Initialize(OriginalSpaceship originalSpaceship)
     {
-        spaceShip = originalSpaceShip;
-        spaceShipHealthController = spaceShip.GetComponent<HealthController>();
-        spaceShipHealthController.SetHealthPanel(healthPanel);
+        this.originalSpaceship = originalSpaceship;
     }
 
-    public void GetDamage(float damage)
+    public void DealDamage(float damage)
     {
-        spaceShipHealthController.GetDamage(damage);
+        originalSpaceship.DealDamage(damage);
+        if (originalSpaceship.IsDestroyed())
+        {
+            gameObject.SetActive(false);
+        }
+        healthPanel.fillAmount = originalSpaceship.GetPercentageCurrentHealth()/100f;
     }
 }
