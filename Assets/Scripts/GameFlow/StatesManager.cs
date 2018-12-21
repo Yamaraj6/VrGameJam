@@ -23,7 +23,7 @@ public class StatesManager : MonoBehaviour
 
     void SetState(int newState)
     {
-        Debug.Log("State " + newState);
+        //Debug.Log("State " + newState);
         currentState = newState;
         foreach (GameObject objectToActivate in states[newState].elementsToActivate)
         {
