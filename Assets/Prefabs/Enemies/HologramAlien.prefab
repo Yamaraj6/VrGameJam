@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smashDetector: {fileID: 1220173884}
-  handColliderTag: 
+  handColliderTag: StraightFinger
   collider: {fileID: 0}
   isChecked: 0
 --- !u!54 &765130092
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smashDetector: {fileID: 1220173884}
-  handColliderTag: 
+  handColliderTag: StraightFinger
   collider: {fileID: 0}
   isChecked: 0
 --- !u!54 &814912474
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smashDetector: {fileID: 1220173884}
-  handColliderTag: 
+  handColliderTag: StraightFinger
   collider: {fileID: 0}
   isChecked: 0
 --- !u!54 &1331206298

@@ -38,6 +38,8 @@ public class SmashDetector : MonoBehaviour
 
     public void UncheckAll()
     {
+        
+        Debug.Log("Uncheck all!");
         marksInProperOrder.ForEach(mark => mark.isChecked = false);
         timer = blockTime;
     }
