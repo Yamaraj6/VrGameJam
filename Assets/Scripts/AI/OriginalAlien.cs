@@ -31,6 +31,7 @@ public class OriginalAlien : MonoBehaviour, IOriginal
         {
             health.AddHealth(-100000);
             smashable.Smash();
+            destroyable.UpdateDestroyState(health.GetPercentageCurrentHealth());
             destroyable.DestroyWithDelay();
             return;
         }

@@ -30,7 +30,6 @@ public class GestureRecognition : MonoBehaviour
     void Update()
     {
         UpdateGesture();
-        Debug.Log(actualGesture);
     }
 
     private void UpdateGesture()

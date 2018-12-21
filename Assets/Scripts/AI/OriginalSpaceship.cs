@@ -36,5 +36,9 @@ public class OriginalSpaceship : MonoBehaviour, IOriginal
         }
 
         destroyable.UpdateDestroyState(health.GetPercentageCurrentHealth());
+        if (health.GetPercentageCurrentHealth() == 0)
+        {
+            destroyable.Destroy();
+        }
     }
 }

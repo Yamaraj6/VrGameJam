@@ -25,7 +25,7 @@ public class SmashDetector : MonoBehaviour
                 return;
             }
 
-            if (!mark.isChecked && mark.Equals(checkedMark))
+            if (mark.Equals(checkedMark))
             {
                 mark.isChecked = true;
                 if (marksInProperOrder.Count - 1 == i)
@@ -34,6 +34,8 @@ public class SmashDetector : MonoBehaviour
                     damageHandler.DealDamage(100, DamageType.Smash);
                     Debug.Log("Smash");
                 }
+
+                return;
             }
         }
     }

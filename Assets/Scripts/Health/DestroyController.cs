@@ -45,10 +45,6 @@ public class DestroyController : MonoBehaviour, IDestroyable
                     currentState = destroyState;
                     DeactiveAllDestroyStates();
                     destroyState.state.SetActive(true);
-                    if (currentHealthInPercents <= 0)
-                    {
-                        Destroy();
-                    }
                 }
                 return;
             }
