@@ -20,6 +20,7 @@ public class SmashDetector : MonoBehaviour
 
             if (!mark.isChecked && !mark.Equals(checkedMark))
             {
+                Debug.Log("Wrong order!");
                 UncheckAll();
                 return;
             }
@@ -31,6 +32,7 @@ public class SmashDetector : MonoBehaviour
                 {
                     UncheckAll();
                     damageHandler.DealDamage(100, DamageType.Smash);
+                    Debug.Log("Smash");
                 }
             }
         }
@@ -38,7 +40,6 @@ public class SmashDetector : MonoBehaviour
 
     public void UncheckAll()
     {
-        
         Debug.Log("Uncheck all!");
         marksInProperOrder.ForEach(mark => mark.isChecked = false);
         timer = blockTime;

@@ -15,7 +15,7 @@ public class Mark :MonoBehaviour
     {
         if (other.CompareTag(handColliderTag))
         {
-            Debug.Log("Mark colision: " + other.name);
+            Debug.Log("Mark colision: " + name);
             smashDetector.Check(this);
         }
     }
