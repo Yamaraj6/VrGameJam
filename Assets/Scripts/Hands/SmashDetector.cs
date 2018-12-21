@@ -25,7 +25,7 @@ public class SmashDetector : MonoBehaviour
                 return;
             }
 
-            if (mark.Equals(checkedMark))
+            if (!mark.isChecked && mark.Equals(checkedMark))
             {
                 mark.isChecked = true;
                 if (marksInProperOrder.Count - 1 == i)
