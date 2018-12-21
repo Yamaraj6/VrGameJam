@@ -9,6 +9,7 @@ public class SkillCast : MonoBehaviour
     public UnityEvent[] action;
     public GameObject[] loaderBracelet;
     public float[] coolDownTime;
+    public float timeBetweenSkills = 0.5f;
 
     private float[] lastCast;
     private bool[] able;
@@ -48,7 +49,7 @@ public class SkillCast : MonoBehaviour
         }
         for (int i = 0; i < loaderBracelet.Length; i++)
         {
-            if ((lastCast[i] + 1 > Time.time))
+            if ((lastCast[i] + timeBetweenSkills > Time.time))
             {
                 able = new bool[loaderBracelet.Length];
             }
