@@ -7,6 +7,7 @@ public class StatesManager : MonoBehaviour
     [System.Serializable]
     public class State
     {
+        public float delayTime;
         public GameObject[] elementsToActivate;
         public GameObject[] elementsToDeactivate;
     }
@@ -31,6 +32,14 @@ public class StatesManager : MonoBehaviour
         foreach (GameObject objectToDectivate in states[newState].elementsToDeactivate)
         {
             objectToDectivate.SetActive(false);
+        }
+        switch (states[newState].delayTime)
+        {
+            case 0:
+                break;
+            default:
+                Invoke("NextState", states[newState].delayTime);
+                break;
         }
     }
 
